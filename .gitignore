@@ -1,0 +1,33 @@
+```
+# Compiled and build artifacts
+*.class
+target/
+
+# Dependencies
+.m2/
+.gradle/
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temp files
+*.log
+*.tmp
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+dependency-reduced-pom.xml
+```

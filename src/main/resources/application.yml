@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    com.multiai.collaboration: DEBUG
+    org.springframework.web: INFO
+
+multiai:
+  platforms:
+    qwen:
+      api-key: ${QWEN_API_KEY:your-qwen-api-key}
+      base-url: https://dashscope.aliyuncs.com/api/v1
+      model: qwen-max
+    doubao:
+      api-key: ${DOUBAO_API_KEY:your-doubao-api-key}
+      base-url: https://ark.cn-beijing.volces.com/api/v3
+      model: your-doubao-model-id
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY:your-deepseek-api-key}
+      base-url: https://api.deepseek.com/chat/completions
+      model: deepseek-chat
+  collaboration:
+    timeout: 30000
+    retry-count: 3
+    max-token: 2000
