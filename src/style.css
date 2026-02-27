@@ -1,0 +1,240 @@
+:root {
+  /* 主色调 - 蓝色系（代表水） */
+  --primary-color: #1e88e5;
+  --primary-dark: #0d47a1;
+  --primary-light: #64b5f6;
+  --primary-lighter: #bbdefb;
+  
+  /* 辅助色 - 绿色系（代表生态） */
+  --secondary-color: #4caf50;
+  --secondary-dark: #1b5e20;
+  --secondary-light: #81c784;
+  --secondary-lighter: #c8e6c9;
+  
+  /* 预警颜色 */
+  --warning-color: #ff9800;
+  --danger-color: #f44336;
+  --info-color: #00bcd4;
+  --success-color: #4caf50;
+  
+  /* 中性色 */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #999999;
+  --background-light: #f5f5f5;
+  --background-white: #ffffff;
+  --border-color: #e0e0e0;
+  --sidebar-bg: #2c3e50;
+  --sidebar-text: #ecf0f1;
+  --header-bg: #ffffff;
+  --header-text: #333333;
+  
+  /* 字体和间距 */
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-primary);
+  background-color: var(--background-light);
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 按钮样式 */
+button {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+button.secondary {
+  background-color: var(--secondary-color);
+}
+
+button.secondary:hover {
+  background-color: var(--secondary-dark);
+}
+
+/* 链接样式 */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: var(--background-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-lighter);
+}
+
+/* 表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--background-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--primary-lighter);
+  font-weight: 600;
+  color: var(--primary-dark);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+tr:hover {
+  background-color: var(--background-light);
+}
+
+/* 表格容器，用于响应式滚动 */
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-container table {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  #app {
+    flex-direction: column;
+  }
+  
+  .card {
+    padding: 1em;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 1.3em;
+  }
+  
+  h3 {
+    font-size: 1.1em;
+  }
+  
+  /* 响应式表格 */
+  table {
+    font-size: 0.85rem;
+  }
+  
+  th, td {
+    padding: 0.5em;
+  }
+  
+  .table-container {
+    margin-bottom: 1em;
+  }
+}
